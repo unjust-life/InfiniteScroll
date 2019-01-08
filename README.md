@@ -52,4 +52,4 @@ scroll.restart()   开启滚动加载  默认开启 <br>
 scroll.stop()      禁止滚动加载          <br>
 </code></pre>
 
-
+## 预览地址 https://unjust-life.github.io/InfiniteScroll/index
