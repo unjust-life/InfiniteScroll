@@ -1,7 +1,7 @@
-# 无限滚动加载插件
+### 无限滚动加载插件
 不依赖任何库，原生js实现
 
-# InfiniteScroll
+### InfiniteScroll
 
 <div>InfiniteScroll构造函数接受2个参数</div>
 <div>第一个参数为字符串, 指定容器的ID, 第二个是参数为参数对象</div>
