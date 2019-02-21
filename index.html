@@ -16,28 +16,26 @@
         <div class="item">2</div>
         <div class="item">3</div>
     </div>
+    <div class="event-custom-box">
 
-
+    </div>
 
     <script src="./src/InfiniteScroll.js"></script>
     <script>
-        var num = 4
+        var num = 3
 
         // 使用示例
-        let scroll = new InfiniteScroll('list', {
+        var scroll = new InfiniteScroll('list', {
             // distance: 100,       //距离底部阈值      非必须
             // loading : false,     //防止重复加载      非必须
-            // noMore  : false,     //是否禁止加载更多   非必须
-            // initLoad: true       //若为真，则会立即检查是否需要执行加载方法。在初始状态下内容撑不满容器时十分有用。 非必须
-            loadMore: function () { //接收一个函数  在容器滚动到底部时触发
-                this.loading = true
-                console.log('请求数据')
+            // noMore  : false,     //禁止滚动加载      非必须 默认false
+            // initLoad: true       //若为true，则会立即检查是否需要执行加载方法，在初始状态下内容撑不满容器时十分有用。  默认true
+            loadMore: function () { //加载方法  在容器滚动到底部时触发 必须  根据自己的逻辑来设定
                 setTimeout(() => {
-                    let dom = '<div class="item">' + num + '</div>'
+                    let dom = '<div class="item">' + ++num + '</div>' + '<div class="item">' + ++num + '</div>'
                     $('#list').append(dom)
-                    num++
                     this.loading = false
-                }, 500);
+                }, 400);
 
             }
         })
