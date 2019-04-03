@@ -50,7 +50,6 @@ stop()      禁止滚动加载<br>
 
 ## 预览地址 https://unjust-life.github.io/InfiniteScroll/index
 
-
 版本更新记录
 
 -v0.2新增使用es6重构的版本 修改优化部分逻辑 精简代码
