@@ -1,0 +1,22 @@
+{
+  "name": "infinitescroll",
+  "version": "1.0.0",
+  "description": "不依赖任何库，原生js实现",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unjust-life/InfiniteScroll.git"
+  },
+  "keywords": [
+    "scroll"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unjust-life/InfiniteScroll/issues"
+  },
+  "homepage": "https://github.com/unjust-life/InfiniteScroll#readme"
+}

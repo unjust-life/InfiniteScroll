@@ -5,26 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 </head>
-<style>
-body {
-    margin: 0;
-    text-align: center;
-    color: #555;
-}
-.list {
-    height: 100vh;
-    overflow: scroll;
-}
-.item {
-    line-height: 15vh;
-    text-align: center;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-}
-
-</style>
 <body>
     
     <div id="list" class="list">
@@ -39,12 +22,12 @@ body {
 
     </div>
 
-    <script src="./src/InfiniteScroll.js"></script>
+    <script src="../index.js"></script>
     <script>
         var num = 5
 
         // 使用示例
-        var scroll = new InfiniteScroll('list', {
+        var scroll = new infiniteScroll('list', {
             // distance: 100,       //距离底部阈值      非必须
             // noMore  : false,     //禁止滚动加载      非必须 默认false
             // initLoad: true       //若为true，则会立即检查是否需要执行加载方法，在初始状态下内容撑不满容器时十分有用。  默认true

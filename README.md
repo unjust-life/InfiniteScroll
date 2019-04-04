@@ -1,22 +1,36 @@
-### 无限滚动加载插件
-不依赖任何库，原生js实现
+infiniteScrollBot
+===========
 
-### InfiniteScroll
-
-<div>InfiniteScroll构造函数接受2个参数</div>
-<div>第一个参数为字符串, 指定容器的ID, 第二个是参数为配置对象</div>
-<div>distance: 100,       距离底部阈值      非必须</div>
-<div>noMore  : false,     是否禁止加载更多   非必须</div>
-<div>initLoad: true       若为真，则会立即检查是否需要执行加载方法。在初始状态下内容撑不满容器时十分有用。 非必须</div>
-<div>loadMore: 接受一个函数  在容器滚动到底部时触发的加载方法 在这里自定义逻辑 加载完成后执行this.loading = false。如果已经是最后一条数据了this.noMore = true来禁止重复加载。</div>
+## 介绍
+该模块可以使容器进行滚动到底部时加载更多数据。
 
 
----
+### npm安装
 
-#一个简单的实例
+```bash
+$ npm install infinitescrollbot
+```
 
-<pre><code>
-var scroll = new InfiniteScroll('list', {
+
+### RequireJS
+```javascript
+require.config({
+	paths: {
+		diffChinese: './infiniteScrollBot/index.js'
+	}
+});
+
+require( [ 'infiniteScrollBot' ], function( infiniteScrollBot ) {
+	...
+});
+
+```
+
+### 直接引用
+```html
+<script src="./infiniteScrollBot.js"></script>
+<script>
+var scroll = new infiniteScroll('list', {
     loadMore: function () {
         do some thing
         setTimeout(() => {
@@ -24,34 +38,39 @@ var scroll = new InfiniteScroll('list', {
         }, 500);
     }
 })
-</code></pre>
+</script>
+```
 
 
----
-#参数对象api
+### api文档
 
-<pre><code>
-distance: 100,       //距离底部阈值      数值
-loading : false,     //防止重复加载      布尔
-noMore  : false,     //是否禁止加载更多   布尔
-initLoad: true       //若为真，则会立即检查是否需要执行加载方法。在初始状态下内容撑不满容器时十分有用。 布尔
-loadMore: function () { //接收一个函数  在容器滚动到底部时触发
-    console.log('请求数据')
-    setTimeout(() => {
-        this.loading = false
-    }, 500);
+infiniteScroll构造函数接受2个参数
 
-}
+第一个参数为字符串, 指定容器的ID, 第二个是参数为配置对象
 
-可使用的方法api
-restart()   开启滚动加载<br>
-stop()      禁止滚动加载<br>
-</code></pre>
+distance: 100,       距离底部阈值      非必须
 
-## 预览地址 https://unjust-life.github.io/InfiniteScroll/index
+noMore  : false,     是否禁止加载更多   非必须
+
+initLoad: true       若为真，则会立即检查是否需要执行加载方法。在初始状态下内容撑不满容器时十分有用。 非必须
+
+loadMore: 接受一个函数  在容器滚动到底部时触发的加载方法 在这里自定义逻辑 加载完成后执行this.loading = false。如果已经是最后一条数据了this.noMore = true来禁止重复加载。
+
+
+方法
+
+restart()   开启滚动加载
+
+stop()      禁止滚动加载
+
+
+
+### 预览地址 https://unjust-life.github.io/InfiniteScroll/src/index
 
 版本更新记录
 
--v0.2新增使用es6重构的版本 修改优化部分逻辑 精简代码
+-v1.0.0  发布npm包 兼容webpack打包 CommonJS和AMD规范
+
+-v0.2修改优化部分逻辑 精简代码
 
 -v0.1初始版
