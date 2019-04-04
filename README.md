@@ -1,9 +1,10 @@
-infiniteScrollBot
+Infinite-Scroll
 ===========
 
 ### 介绍
 该模块可以使容器进行滚动到底部时加载更多数据。
 
+当容器滚动到底部时会动态的触发loadMore方法。
 
 ### npm安装
 
@@ -16,11 +17,11 @@ $ npm install infinitescrollbot
 ```javascript
 require.config({
 	paths: {
-		diffChinese: './infiniteScrollBot/index.js'
+		infiniteScroll: './infiniteScroll/index.js'
 	}
 });
 
-require( [ 'infiniteScrollBot' ], function( infiniteScrollBot ) {
+require( [ 'infiniteScroll' ], function( infiniteScroll ) {
 	...
 });
 
@@ -28,7 +29,7 @@ require( [ 'infiniteScrollBot' ], function( infiniteScrollBot ) {
 
 ### 直接引用
 ```html
-<script src="./infiniteScrollBot.js"></script>
+<script src="./infiniteScroll.js"></script>
 <script>
 var scroll = new infiniteScroll('list', {
     loadMore: function () {
@@ -65,10 +66,9 @@ stop()      禁止滚动加载
 
 
 
-预览地址 https://unjust-life.github.io/InfiniteScroll/src/index
+##### 预览地址 https://unjust-life.github.io/InfiniteScroll/src/index
 
-==========
-版本更新记录
+##### 版本更新记录
 
 -v1.0.0  发布npm包 兼容webpack打包 CommonJS和AMD规范
 

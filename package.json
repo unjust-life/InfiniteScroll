@@ -1,7 +1,7 @@
 {
-  "name": "infinitescroll",
+  "name": "infinite-scroll",
   "version": "1.0.0",
-  "description": "不依赖任何库，原生js实现",
+  "description": "无限滚动加载插件",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
