@@ -1,23 +1,22 @@
 Infinite-Scroll
 ===========
 
-### 介绍
+## 介绍
+
 该模块可以使容器进行滚动到底部时加载更多数据。
 
 当容器滚动到底部时会动态的触发loadMore方法。
 
-### npm安装
-
+## npm安装
 ```bash
-$ npm install infinitescrollbot
+$ npm install infinite-scroll
 ```
 
-
-### RequireJS
+## RequireJS
 ```javascript
 require.config({
 	paths: {
-		infiniteScroll: './infiniteScroll/index.js'
+		xxx: './infiniteScroll/index.js'
 	}
 });
 
@@ -27,10 +26,11 @@ require( [ 'infiniteScroll' ], function( infiniteScroll ) {
 
 ```
 
-### 直接引用
+## 直接引用
 ```html
-<script src="./infiniteScroll.js"></script>
+<script src="./xxx.js"></script>
 <script>
+
 var scroll = new infiniteScroll('list', {
     loadMore: function () {
         do some thing
@@ -39,31 +39,61 @@ var scroll = new infiniteScroll('list', {
         }, 500);
     }
 })
+
 </script>
 ```
 
+## 使用方式
+```javascript
+new infiniteScroll(id, obj)
+```
 
-### api文档
+- infiniteScroll构造函数接受2个参数
+- 第一个参数为字符串, 指定容器的ID, 第二个是参数为配置对象。
+- 对象参数值：
+<table>
+  <thead>
+    <tr>
+        <td>名称</td>
+        <td>功能</td>
+        <td>默认值</td>
+        <td>可选值</td>
+    </tr>
+  </thead>
+  <tobody>
+    <tr>
+      <td>distance</td>
+      <td>滚动距离容器底部阈值 触发loadMore</td>
+      <td>100</td>
+      <td>Number</td>
+    </tr>
+    <tr>
+      <td>noMore</td>
+      <td>是否禁止加载更多</td>
+      <td>false</td>
+      <td>Boolen</td>
+    </tr>
+    <tr>
+      <td>initLoad</td>
+      <td>默认会立即检查是否需要执行加载方法。在初始状态下内容撑不满容器时十分有用。</td>
+      <td>true</td>
+      <td>Boolen</td>
+    </tr>
+    <tr>
+      <td>loadMore</td>
+      <td>在容器滚动到底部时触发的加载方法。在这里自定义逻辑，加载完成后执行this.loading = false。
+      如果已经是最后一条数据了this.noMore = true来禁止重复加载。</td>
+      <td>必填项</td>
+      <td>Function</td>
+    </tr>
+  </tobody>
+</table>
 
-infiniteScroll构造函数接受2个参数
 
-第一个参数为字符串, 指定容器的ID, 第二个是参数为配置对象
+### 可用方法
+- restart()   开启滚动加载
 
-distance: 100,       距离底部阈值      非必须
-
-noMore  : false,     是否禁止加载更多   非必须
-
-initLoad: true       若为真，则会立即检查是否需要执行加载方法。在初始状态下内容撑不满容器时十分有用。 非必须
-
-loadMore: 接受一个函数  在容器滚动到底部时触发的加载方法 在这里自定义逻辑 加载完成后执行this.loading = false。如果已经是最后一条数据了this.noMore = true来禁止重复加载。
-
-
-方法
-
-restart()   开启滚动加载
-
-stop()      禁止滚动加载
-
+- stop()      禁止滚动加载
 
 
 ##### 预览地址 https://unjust-life.github.io/InfiniteScroll/src/index
