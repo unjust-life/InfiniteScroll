@@ -16,7 +16,7 @@ $ npm install infinite-scroll
 ```javascript
 require.config({
 	paths: {
-		xxx: './infiniteScroll/index.js'
+		infiniteScroll: './infiniteScroll/index.js'
 	}
 });
 
@@ -28,7 +28,7 @@ require( [ 'infiniteScroll' ], function( infiniteScroll ) {
 
 ## 直接引用
 ```html
-<script src="./xxx.js"></script>
+<script src="./infiniteScroll.js"></script>
 <script>
 
 var scroll = new infiniteScroll('list', {
