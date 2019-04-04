@@ -81,7 +81,7 @@ new infiniteScroll(id, obj)
     </tr>
     <tr>
       <td>loadMore</td>
-      <td>在容器滚动到底部时触发的加载方法。在这里自定义逻辑，加载完成后执行this.loading = false。
+      <td>在容器滚动到底部时触发。ajax加载完成后执行this.loading = false。
       如果已经是最后一条数据了this.noMore = true来禁止重复加载。</td>
       <td>必填项</td>
       <td>Function</td>
